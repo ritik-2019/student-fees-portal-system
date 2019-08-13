@@ -1,0 +1,24 @@
+
+{% if pic %}
+{% for k in pic %}
+    <img src="../media/{{k.photo}}" width="100" height="100" style="border-radius: 25%;" />
+{% endfor %}
+{% else %}
+<p>
+    <a href="../uploadphotoadmin/">Upload Photo</a>
+</p>
+{% endif %}
+
+{% if data %}
+{% for a in data%}
+
+<p>Name: <span>{{a.name}}</span></p>
+    <p>ID: {{a.id}}</p>
+    <p>Contact: {{a.contact}}</p>
+    <p>E-mail: {{a.email}}</p>
+    <p><a href="../change_password_admin/">Change Password</a> </p>
+{% endfor %}
+{% elif result %}
+<h2>Data Saved</h2>
+<p><a href="../admin_home/">Continue To Admin Home</a> </p>
+{% endif %}

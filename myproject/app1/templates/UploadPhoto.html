@@ -1,0 +1,11 @@
+
+<h1>Photo Upload</h1>
+<form method="post" action="../uploadphoto/" enctype="multipart/form-data">
+    {% csrf_token %}
+        <p>Enter the E-mail of student <input type="email" name="T1"/> </p>
+    <p>Photo <input type="file" name="F1" /></p>
+    <p><input type="submit" name="B1" value="Upload" /></p>
+</form>
+{% if msg %}
+<h2>{{msg}}</h2>
+{% endif %}

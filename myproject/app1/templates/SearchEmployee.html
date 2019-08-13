@@ -1,0 +1,26 @@
+
+{% if data1 %}
+{% for k in data1 %}
+    <img src="../media/{{k.photo}}" width="100" height="100" style="border-radius: 25%;" />
+{% endfor %}
+{% else %}
+<p>
+    <a href="../uploadphoto/">Upload Photo</a>
+</p>
+{% endif %}
+
+{% if data %}
+{% for a in data%}
+<form method="post" action="../save_employee/">
+    {% csrf_token %}
+    <p>Name: <input type="text" name="T1" value="{{a.name}}"/></p>
+    <p>ID: <input type="text" name="T2" value="{{a.id}}"/></p>
+    <p>Contact: <input type="text" name="T3" value="{{a.contact}}"/></p>
+    <p>E-mail: <input readonly type="text" name="T4" value="{{a.email}}"/></p>
+    <input type="submit" value="Save Changes" name="B1"/>
+</form>
+{% endfor %}
+{% elif result %}
+<h2>{{result}}</h2>
+<p><a href="../employee_data/">Go to Show Employees</a></p>
+{% endif %}

@@ -1,0 +1,38 @@
+
+<h1 style="text-align: center">Student Home</h1>
+{% if data %}
+
+        <p>
+           <img src="../media/{{data.photo}}" width="100" height="100" style="border-radius: 25%;" />
+       </p>
+        <p>
+            <b>Name:</b> {{data.name}}
+            <br/>
+        </p>
+        <p>
+            <b>Class:</b> {{data.class_stud}}
+        </p>
+        <p>
+            <b>Roll Number:</b> {{data.rollno}}
+            <br/>
+        </p>
+        <p>
+            <b>E-mail:</b> {{data.email}}
+            <br/>
+        </p>
+        <p>
+            <b>Fees:</b> {{data.fees}}
+            <br/>
+        </p>
+        <p>
+            <b>Fees Deposited:</b> {{data.fees_dep}}
+            <br/>
+        </p>
+        <p>
+            <b>Fees Deposited by :</b> {{data.employee_email}}
+            <br/>
+        </p>
+{% endif %}
+<p><a href="../employee_profile/">Edit Profile</a></p>
+<p><a href="../change_password_employee/">Change Password</a> </p>
+<p><a href="../logout/">Logout</a></p>

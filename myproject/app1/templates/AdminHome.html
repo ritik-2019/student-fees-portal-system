@@ -1,0 +1,22 @@
+
+<h1 style="text-align: center; background-color: grey; text-decoration-color: black;" >Admin Home</h1>
+{% extends 'master.html' %}
+{% load static %}
+{% block m1 %}
+
+<p><a href="../admin_profile/">Profile</a></p>
+<p><a href="../logout/">Logout</a></p>
+<hr/>
+<h3>Student</h3>
+<p><a href="../student_data/">Show Students</a> </p>
+<p><a href="../student_reg/">Student Registration</a> </p>
+<p><a href="../edit_student0/">Edit Student</a> </p>
+<p><a href="../delete_student0/">Delete Student</a> </p>
+<hr/>
+<h3>Employee</h3>
+<p><a href="../employee_data/">Show Employees</a> </p>
+<p><a href="../employee_reg/">Employee Registration</a> </p>
+<p><a href="../edit_employee0/">Edit Employee</a> </p>
+<p><a href="../delete_employee0/">Delete Employee</a> </p>
+<hr/>
+{% endblock %}

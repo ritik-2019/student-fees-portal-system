@@ -1,0 +1,32 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+       {% block title %}
+        {% endblock %}
+    </title>
+    <link href="{% static 'css/master1.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body >
+<div id="main" >
+    <div id="wrapper">
+        {% block head %}
+        {% endblock %}
+        <div id="banner"></div>
+        <div id="menu">
+              {% block menu %}
+              {% endblock %}
+        </div>
+        <div id="middle">
+            <div id="content">
+              {% block m1 %}
+              {% endblock %}
+            </div>
+            <div id="ad"></div>
+        </div>
+        <div id="bottom"></div>
+    </div>
+</div>
+</body>
+</html>

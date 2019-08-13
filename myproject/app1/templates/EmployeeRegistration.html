@@ -1,0 +1,40 @@
+
+<p>Employee Registration </p>
+<form action="../employee_reg/" method="post" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    <p>Name :
+  <input type="text" name="T1">
+</p>
+<p>
+  ID :
+  <input type="text" name="T2">
+</p>
+<p>
+  Contact :
+  <input type="text" name="T3">
+</p>
+<p>
+  Email:
+  <input type=
+                 "email" name="T4">
+</p>
+<p>
+    Password:
+  <input type="password" name="T5">
+</p>
+<p>
+    Confirm Password :
+  <input type="password" name="T6" id="password2">
+</p>
+    <p>Photo <input type="file" name="F1" /></p>
+<p>
+	<input type="submit" value="Register" name="B1">
+</p>
+</form>
+
+
+{% if msg %}
+<h3>{{msg}}</h3>
+{% endif %}

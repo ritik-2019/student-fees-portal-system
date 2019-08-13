@@ -1,0 +1,51 @@
+
+{% if data %}
+<h1>Search Student</h1>
+<form method="post" action="../search_student/">
+    {% csrf_token %}
+    <p>Enter the E-mail of student to be searched/edited : <input type="email" name="E1"/></p>
+    <input type="submit" name="B1" value="Search"/>
+</form>
+<hr/>
+<h1>Student List</h1>
+{% for a in data %}
+
+        <p>
+            <a href="../uploadphoto/">Upload Photo</a>
+        </p>
+        <p>
+            <img src="../media/{{a.photo}}" width="100" height="100" style="border-radius: 25%;" />
+        </p>
+        <p>
+            <b>Name:</b> {{a.name}}
+            <br/>
+        </p>
+        <p>
+            <b>Class:</b> {{a.class_stud}}
+        </p>
+        <p>
+            <b>Roll Number:</b> {{a.rollno}}
+            <br/>
+        </p>
+        <p>
+            <b>E-mail:</b> {{a.email}}
+            <br/>
+        </p>
+        <p>
+            <b>Fees:</b> {{a.fees}}
+            <br/>
+        </p>
+        <p>
+            <b>Fees Deposited:</b> {{a.fees_dep}}
+            <br/>
+        </p>
+        <p>
+            <b>Fees Deposited by :</b> {{a.employee_email}}
+            <br/>
+        </p>
+        <hr/>
+        <a href="../install_data/" value="PAY">PAY</a>
+{% endfor %}
+{% else %}
+    <h2>No Student Record found</h2>
+{% endif %}

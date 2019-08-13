@@ -1,0 +1,15 @@
+
+<h1>Student Data</h1>
+{% if data %}
+<form method="POST" action="../save_student/">
+    {% csrf_token %}
+    <p>Name: <input type="text" name="T1" value="{{data.name}}"/></p>
+    <p>Class: <input type="text" name="T2" value="{{data.class_stud}}"/></p>
+    <p>Roll Number: <input type="text" name="T3" value="{{data.rollno}}"/></p>
+    <p>E-mail: <input readonly type="text" name="T4" value="{{data.email}}"/></p>
+    <p>Fees: <input type="text" name="T5" value="{{data.fees}}"/></p>
+    <p>Fees Deposited: <input type="text" name="T6" value="{{data.fees_dep}}"/></p>
+    <p> <input type="hidden" name="T7" value="{{data.employee_email}}"> </p>
+    <input type="submit" value="Save Changes" name="B1">
+</form>
+{% endif %}

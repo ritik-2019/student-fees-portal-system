@@ -1,0 +1,9 @@
+<h1>installments</h1>
+{% if data %}
+	{% for k in data %}
+		TID:{{k.tid}}<br>
+		sid:{{k.sid}}<br>
+		fees:{{k.amount}}<br>
+		by:{{k.depositedby}}<br>
+	{% endfor %}
+{% endif %}
